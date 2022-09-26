@@ -1,0 +1,16 @@
+.Header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 1.5rem;
+}
+
+.Header a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.Header .active {
+    color: var(--current-color);
+}
