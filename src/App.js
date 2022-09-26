@@ -11,7 +11,7 @@ function App() {
         <RGB />
       </Route>
       <Route exact path="/">
-        <Redirect to="/rgb/255/0/0" />
+        <Redirect to="/rgb/95/15/64" />
       </Route>
       <Route path="*">
         <h1>Not Found</h1>

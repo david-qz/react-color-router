@@ -6,8 +6,8 @@ export default function Header() {
   const cssColor = `rgb(${r}, ${g}, ${b})`;
 
   return <header className='Header' style={{ '--current-color' : cssColor }}>
-    <NavLink to="/rgb/255/0/0">color1</NavLink>
-    <NavLink to="/rgb/0/255/0">color2</NavLink>
-    <NavLink to="/rgb/0/0/255">color3</NavLink>
+    <NavLink to="/rgb/95/15/64">color1</NavLink>
+    <NavLink to="/rgb/227/100/20">color2</NavLink>
+    <NavLink to="/rgb/15/76/92">color3</NavLink>
   </header>;
 }
