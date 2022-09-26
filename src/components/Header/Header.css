@@ -4,11 +4,13 @@
     justify-content: space-around;
 
     font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--off-white);
 }
 
 .Header a {
     text-decoration: none !important;
-    color: inherit;
+    color: black;
 }
 
 .Header .active {
