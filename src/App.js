@@ -1,5 +1,6 @@
 import { NavLink, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
+import RGB from './components/RGB/RGB';
 
 function App() {
   return <>
@@ -13,6 +14,9 @@ function App() {
       </nav>
     </header>
     <Switch>
+      <Route path="/rgb/:r/:g/:b">
+        <RGB />
+      </Route>
       <Route exact path="/">
         <Redirect to="/rgb/255/0/0" />
       </Route>
