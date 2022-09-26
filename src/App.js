@@ -1,6 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
+import NotFound from './components/NotFound/NotFound';
 import RGB from './components/RGB/RGB';
 
 function App({ colors, defaultColor }) {
@@ -14,7 +15,7 @@ function App({ colors, defaultColor }) {
         <Redirect to={defaultColor.toRoute()} />
       </Route>
       <Route path="*">
-        <h1>Not Found</h1>
+        <NotFound />
       </Route>
     </Switch>
   </div>;
