@@ -3,7 +3,10 @@ import './RGB.css';
 
 export default function RGB() {
   const color = useParams();
-  return <div style={{ backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})` }}>
+  return <div
+    className="RGB"
+    style={{ backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})` }}
+  >
     {`rgb(${color.r}, ${color.g}, ${color.b})`}
   </div>;
 }

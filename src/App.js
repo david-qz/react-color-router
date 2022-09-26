@@ -3,7 +3,7 @@ import './App.css';
 import RGB from './components/RGB/RGB';
 
 function App() {
-  return <>
+  return <div className='App'>
     <header>
       <nav>
         <ul>
@@ -24,7 +24,7 @@ function App() {
         <h1>Not Found</h1>
       </Route>
     </Switch>
-  </>;
+  </div>;
 }
 
 export default App;
