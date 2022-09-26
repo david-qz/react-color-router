@@ -3,15 +3,15 @@ import './App.css';
 import Header from './components/Header/Header';
 import RGB from './components/RGB/RGB';
 
-function App() {
+function App({ colors, defaultColor }) {
   return <div className='App'>
     <Switch>
       <Route path="/rgb/:r/:g/:b">
-        <Header />
+        <Header colors={colors} />
         <RGB />
       </Route>
       <Route exact path="/">
-        <Redirect to="/rgb/95/15/64" />
+        <Redirect to={defaultColor.toRoute()} />
       </Route>
       <Route path="*">
         <h1>Not Found</h1>
