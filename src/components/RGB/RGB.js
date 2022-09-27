@@ -10,7 +10,9 @@ export default function RGB() {
     className="RGB"
     style={{
       backgroundColor: `rgb(${r}, ${g}, ${b})`,
-      color: currentColor.lightness > 0.45 ? 'black' : 'var(--off-white)'
+      // https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html#contrast-ratiodef
+      // Threshold of 0.161 calculated according to above formula using black and --off-white luminance values.
+      color: currentColor.luminance > 0.161 ? 'black' : 'var(--off-white)'
     }}
   >
     {`rgb(${r}, ${g}, ${b})`}

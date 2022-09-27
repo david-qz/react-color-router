@@ -14,9 +14,16 @@ export default class Color {
     return `rgb(${this.r}, ${this.g}, ${this.b})`;
   }
 
-  get lightness() {
-    const cMax = Math.max(this.r, this.g, this.b) / 255;
-    const cMin = Math.min(this.r, this.g, this.b) / 255;
-    return cMax + cMin / 2;
+  // https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+  get luminance() {
+    const r = this.r / 255;
+    const g = this.r / 255;
+    const b = this.r / 255;
+
+    const rBold = r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
+    const gBold = g <= 0.03928 ? g / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
+    const bBold = b <= 0.03928 ? b / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
+
+    return 0.2126 * rBold + 0.7152 * gBold + 0.0722 * bBold;
   }
 }
