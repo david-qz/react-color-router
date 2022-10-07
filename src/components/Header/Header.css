@@ -1,0 +1,18 @@
+.Header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--off-white);
+}
+
+.Header a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.Header .active {
+    color: var(--current-color);
+}
